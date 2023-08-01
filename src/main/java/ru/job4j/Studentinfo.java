@@ -5,5 +5,4 @@ public class Studentinfo {
     System.out.println("Pavel Petrov");
     System.out.println("09.07.2000");
     }
-
 }
