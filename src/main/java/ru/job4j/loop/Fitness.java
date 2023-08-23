@@ -7,11 +7,7 @@ public class Fitness {
         while (nik >= ivan) {
             ivan = ivan * 3;
             nik = nik * 2;
-            if (ivan > nik) {
-                month++;
-            } else if (ivan < nik) {
-                month++;
-            }
+            month++;
         }
         return month;
     }
