@@ -65,5 +65,6 @@ class FindLoopTest {
         int finish = 5;
         int result = FindLoop.indexInRange(data, el, start, finish);
         int expected = -1;
+        assertThat(result).isEqualTo(expected);
     }
 }
