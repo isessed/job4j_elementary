@@ -8,16 +8,11 @@ public class Machine {
         int[] coins = {10, 5, 2, 1};
         int[] rsl = new int[100];
         int size = 0;
-        int variance = money - price;
-        for (int i = 0; i < coins.length; i++) {
-            while (variance > 0) {
-                if (coins[i] > variance) {
-                    i++;
-                } else {
-                    variance -= coins[i];
-                    rsl[size] = coins[i];
-                    size++;
-                }
+        for (int coin : coins) {
+            while (coin <= money - price) {
+                money -= coin;
+                rsl[size] = coin;
+                size++;
             }
         }
         return Arrays.copyOf(rsl, size);
