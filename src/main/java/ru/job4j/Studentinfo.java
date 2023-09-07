@@ -4,5 +4,10 @@ public class Studentinfo {
     public static void main(String[] args) {
     System.out.println("Pavel Petrov");
     System.out.println("09.07.2000");
+        int count = 0;
+        while (count < 5) {
+            count++;
+        }
+        System.out.println(count);
     }
 }
