@@ -10,12 +10,20 @@ public class SimpleStringEncoder {
             if (symbol == input.charAt(i)) {
                 counter++;
             } else {
-                result = counter > 1 ? result + symbol + counter : result + symbol;
+                if (counter > 1) {
+                    result += String.valueOf(symbol) + counter;
+                } else {
+                    result += String.valueOf(symbol);
+                }
                 symbol = input.charAt(i);
                 counter = 1;
             }
         }
-        result = counter > 1 ? result + symbol + counter : result + symbol;
+        if (counter > 1) {
+            result += String.valueOf(symbol) + counter;
+        } else {
+            result += String.valueOf(symbol);
+        }
         return result;
     }
 }
