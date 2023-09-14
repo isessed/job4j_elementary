@@ -1,13 +1,16 @@
 package ru.job4j.condition;
 
 public class Max {
-    public static int max(int left, int right) {
-        int result = (left > right) ? left : right;
-        return result;
+    public int max(int left, int right) {
+        return (left > right) ? left : right;
     }
 
-    public static void main(String[] args) {
-        int result = max(3, 2);
-        System.out.println(result);
+    public int max(int first, int second, int third) {
+        int result = max(second, third);
+        return max(first, result);
+    }
+
+    public int max(int first, int second, int third, int fourth) {
+        return max(first, second, max(third, fourth));
     }
 }
