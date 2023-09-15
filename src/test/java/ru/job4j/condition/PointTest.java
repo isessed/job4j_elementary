@@ -8,6 +8,24 @@ import static org.junit.jupiter.api.Assertions.*;
 class PointTest {
 
     @Test
+    void when012To345Then5Dot19() {
+        Point a = new Point(0, 1, 2);
+        Point b = new Point(3, 4, 5);
+        double expected = 5.19;
+        double out = a.distance3d(b);
+        assertEquals(expected, out, 0.01);
+    }
+
+    @Test
+    void when678To234Then() {
+        Point a = new Point(6, 7, 8);
+        Point b = new Point(2, 3, 4);
+        double expected = 6.92;
+        double out = a.distance3d(b);
+        assertEquals(expected, out, 0.01);
+    }
+
+    @Test
     void when00To20Then2() {
         Point a = new Point(0, 0);
         Point b = new Point(2, 0);
