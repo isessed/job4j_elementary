@@ -17,7 +17,7 @@ class PointTest {
     }
 
     @Test
-    void when678To234Then() {
+    void when678To234Then6Dot92() {
         Point a = new Point(6, 7, 8);
         Point b = new Point(2, 3, 4);
         double expected = 6.92;
@@ -35,7 +35,7 @@ class PointTest {
     }
 
     @Test
-    void when01To21Then() {
+    void when01To21Then2() {
         Point a = new Point(0, 1);
         Point b = new Point(2, 1);
         double expected = 2;
